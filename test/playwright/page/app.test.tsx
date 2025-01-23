@@ -9,10 +9,11 @@ describe("Test e2e with playwright", () => {
   });
 
   it("should mount the component correctly", async () => {
-    
     await expect.element(page.getByText("Hello, View!")).toBeInTheDocument();
     await expect.element(page.getByTestId("counter-value")).toHaveTextContent("0");
     await expect.element(page.getByRole("button")).toHaveTextContent("Increment");
+
+    // Unable to mock the fetch data yet.
     await expect.element(page.getByRole("heading", { name: 'Patricia Lebsack' })).toBeVisible();
     await expect.element(page.getByText("Julianne.OConner@kory.org")).toBeVisible()
   });
