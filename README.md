@@ -48,3 +48,9 @@ export default tseslint.config({
   },
 })
 ```
+
+
+
+
+# Browser Mode
+- https://vitest.dev/guide/browser/
