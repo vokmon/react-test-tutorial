@@ -8,7 +8,8 @@ export default defineConfig({
   test: {
     globals: true,
     environment: "jsdom",
-    include: ['test/playwright/**/*.test.tsx', 'test/playwright/**/*.test.ts'],
+    include: ['**/*.test.tsx', '**/*.test.ts'],
+    root: "test/playwright",
     browser: {
       provider: 'playwright', // or 'webdriverio'
       enabled: true,
@@ -16,7 +17,7 @@ export default defineConfig({
       instances: [
         { browser: 'chromium', globals: true },
       ],
-      // headless: true,
+      headless: true,
     },
     // reporters: ["html"]
   },
